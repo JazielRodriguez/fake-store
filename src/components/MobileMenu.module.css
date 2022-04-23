@@ -1,0 +1,9 @@
+.menu {
+  position: fixed;
+  top: 7.6rem;
+  left: 0;
+  background-color: var(--yellowLite);
+  height: calc(100vh - 7.6rem);
+  width: 100%;
+
+}
