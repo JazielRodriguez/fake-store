@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'wouter'
 import { useMediaQuery } from 'react-responsive'
 import Container from './Container'
 import styles from './Header.module.css'
 import MobileMenu from './MobileMenu'
+import NavItems from './NavItems'
 const Header = () => {
   const [menuMobileState, setMenuMobileState] = useState<boolean>(false)
   const isTabletOrDesktop = useMediaQuery({ query: '(min-width: 48rem)' })
@@ -18,11 +18,7 @@ const Header = () => {
         <div className={styles['header-content']}>
           <h2>Your Store</h2>
           {isTabletOrDesktop && (
-            <nav>
-              <Link href='/products'>
-                <a>About Us</a>
-              </Link>
-            </nav>
+            <NavItems />
           )}
           {!isTabletOrDesktop && (
             <div className={styles['mobile-menu-btn']} onClick={mobileMenuHandler
@@ -32,7 +28,7 @@ const Header = () => {
               <span></span>
             </div>
           )}
-          {menuMobileState && <MobileMenu />}
+          {menuMobileState && <MobileMenu mobileMenuHandler={mobileMenuHandler} />}
         </div>
       </Container>
     </header>

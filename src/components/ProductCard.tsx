@@ -7,14 +7,14 @@ const ProductCard = ({ productInfo }: { productInfo: Product }) => {
   return (
     <div className={styles['product-card']}>
       <div className={styles['product-image']}>
-        {/* <img className={styles.image} src={productInfo.image} /> */}
+        <img className={styles.image} src={productInfo.image} />
       </div>
       <div className={styles['product-info']}>
         <div className={styles['product-resume']}>
           <h2>{productInfo.title}</h2>
           <p>{resumeProduct}</p>
         </div>
-        <Link href='product'>
+        <Link href={`product/${productInfo.id}`}>
           <a className={styles['product-btn']}>View Details</a>
         </Link>
       </div>

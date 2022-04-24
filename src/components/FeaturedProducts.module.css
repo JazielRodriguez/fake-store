@@ -3,13 +3,16 @@
   color: var(--morado);
 }
 .product-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 30rem;
   gap: 1.6rem;
+  min-height: 20rem;
 }
 @media (max-width: 48rem) {
   .product-list {
     grid-template-columns: 1fr;
+    grid-auto-rows:max-content;
   }
 }

@@ -1,0 +1,24 @@
+.categories {
+  margin: 2rem 0;
+}
+.categories-list {
+  display:grid;
+  margin: 2rem 0;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+}
+
+.categories-list p {
+  background-color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+@media (max-width:48rem) {
+  .categories-list {
+    overflow: auto;
+  }
+}
