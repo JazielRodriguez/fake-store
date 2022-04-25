@@ -25,9 +25,7 @@ const FeaturedProducts = () => {
     <>
       <h2 className={styles.title}>Our featured products</h2>
       <div className={styles['product-list']}>
-        {isLoading && (
-          <LoadingComponent />
-        )}
+        {isLoading && <LoadingComponent />}
         {products.map((product) => (
           <ProductCard key={product.id} productInfo={product} />
         ))}

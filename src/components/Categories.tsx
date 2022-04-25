@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'wouter'
 import styles from './Categories.module.css'
 
 const Categories = () => {
@@ -19,7 +20,11 @@ const Categories = () => {
       <h2>View all categories</h2>
       <div className={styles['categories-list']}>
         {categories.map((category) => (
-          <p key={category}><span>{category}</span></p>
+          <Link key={category} href={`/products/${category}`}>
+            <p>
+              <span>{category}</span>
+            </p>
+          </Link>
         ))}
       </div>
     </div>
