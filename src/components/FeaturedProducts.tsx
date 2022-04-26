@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 import styles from './FeaturedProducts.module.css'
-import ProductCard from './ProductCard'
-import LoadingComponent from './LoadingComponent'
-export interface Product {
-  id: number
-  title: string
-  image: string
-  description: string
-}
+import ProductList from './ProductList'
+import { Product } from '../types/index'
 const FeaturedProducts = () => {
   const [products, setProducts] = useState<Array<Product>>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -24,12 +18,7 @@ const FeaturedProducts = () => {
   return (
     <>
       <h2 className={styles.title}>Our featured products</h2>
-      <div className={styles['product-list']}>
-        {isLoading && <LoadingComponent />}
-        {products.map((product) => (
-          <ProductCard key={product.id} productInfo={product} />
-        ))}
-      </div>
+      <ProductList products={products} isLoading={isLoading} />
     </>
   )
 }

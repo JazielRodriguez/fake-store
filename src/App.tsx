@@ -9,8 +9,8 @@ const App = () => {
     <>
       <Header />
       <Container>
-          <FeaturedProducts />
-          <Categories />
+        <FeaturedProducts />
+        <Categories />
       </Container>
     </>
   )

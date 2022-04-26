@@ -1,0 +1,5 @@
+.categories-content h1 {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  color: var(--morado);
+}

@@ -2,7 +2,7 @@
   padding: 0.6rem;
   border-radius: 6px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));;
   border: 1px solid #000;
   gap: 1.6rem;
   transition: transform 0.2s ease-in-out;
@@ -48,8 +48,8 @@
   text-align: center;
   margin-top: 1rem;
 }
-@media (max-width:480px) {
+/* @media (max-width:480px) {
   .product-card {
     grid-template-columns: 1fr;
   }
-}
+} */

@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+}
+.form button {
+  display: block;
+  padding: 2rem 4rem ;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  background: var(--morado);
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 48rem) {
+  .form button {
+    width: 100%;
+  }
+}

@@ -1,8 +1,6 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styles from './Container.module.css'
-interface Children {
-  children: ReactNode
-}
+import { Children } from '../types/index'
 const Container = ({ children }: Children) => {
   return <div className={styles.container}>{children}</div>
 }

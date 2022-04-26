@@ -3,8 +3,8 @@ import { Link } from 'wouter'
 const NavItems = () => {
   return (
     <nav>
-      <Link href='/products'>
-        <a>About Us</a>
+      <Link href='/signin'>
+        <a>Create an account</a>
       </Link>
     </nav>
   )
