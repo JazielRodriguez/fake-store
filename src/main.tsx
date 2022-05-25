@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
@@ -12,17 +12,19 @@ const SignIn = React.lazy(() => import('./pages/SignIn'))
 // import SignIn from './pages/SignIn'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Route path='/'>
-      <App />
-    </Route>
-    <Route path='/signin'>
-      <SignIn />
-    </Route>
-    <Route path='/products/product/:id'>
-      {(params) => <Product id={params.id} />}
-    </Route>
-    <Route path='/products/:category'>
-      {(params) => <PageCategories category={params.category} />}
-    </Route>
+    <Suspense fallback={<p>Loading</p>}>
+      <Route path='/'>
+        <App />
+      </Route>
+      <Route path='/signin'>
+        <SignIn />
+      </Route>
+      <Route path='/products/product/:id'>
+        {(params) => <Product id={params.id} />}
+      </Route>
+      <Route path='/products/:category'>
+        {(params) => <PageCategories category={params.category} />}
+      </Route>
+    </Suspense>
   </React.StrictMode>
 )
